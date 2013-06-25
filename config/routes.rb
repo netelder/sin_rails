@@ -1,4 +1,10 @@
 SinRails::Application.routes.draw do
+
+  root :to => "users#index"
+
+  resources :users, :only => [:new, :create, :destroy] do
+    resources :urls, :except => [:show, :edit, :update]
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
