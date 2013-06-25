@@ -14,20 +14,20 @@
 ActiveRecord::Schema.define(:version => 20130625004947) do
 
   create_table "urls", :force => true do |t|
-    t.string   "email"
-    t.string   "password_hash"
-    t.string   "name"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
-  end
-
-  create_table "users", :force => true do |t|
     t.string   "short_name"
     t.text     "url"
     t.integer  "click_count"
     t.integer  "user_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "email"
+    t.string   "password_digest"
+    t.string   "name"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
 end

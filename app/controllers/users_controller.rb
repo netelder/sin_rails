@@ -2,16 +2,15 @@ class UsersController < ActionController::Base
   # protect_from_forgery
 
   def index
-    "index"
+    @user = User.new
   end
 
   def create
     "create"
   end
 
-  def new
-    "new"
-  end
+  # def new
+  # end
 
   def destroy
     "destroy"
